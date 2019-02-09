@@ -1,0 +1,50 @@
+$blue: #3476B7;
+$lightBlue: #4993C8;
+$darkBlue: #172A4C;
+$black: #343434;
+$gray: #9B9B9B;
+$white: #F2F2F2;
+$red: #C83F27;
+$green: #1E9562;
+
+
+@font-face {
+    font-family: 'Ford Antenna';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Ford Antenna Regular'), local('FordAntenna-Regular'),
+       url('../fonts/FordAntenna-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Ford Antenna';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Ford Antenna Light'), local('FordAntenna-Light'),
+       url('../fonts/FordAntenna-Light.woff') format('woff');
+}
+
+
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+@mixin ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
