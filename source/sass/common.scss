@@ -1,29 +1,66 @@
-$blue: #3476B7;
-$lightBlue: #4993C8;
-$darkBlue: #172A4C;
-$black: #343434;
-$gray: #9B9B9B;
-$white: #F2F2F2;
-$red: #C83F27;
-$green: #1E9562;
+// $blue: #3476B7;
+// $lightBlue: #4993C8;
+// $darkBlue: #172A4C;
+// $black: #343434;
+// $gray: #9B9B9B;
+// $white: #F2F2F2;
+// $red: #C83F27;
+// $green: #1E9562;
 
 
 @font-face {
-    font-family: 'Ford Antenna';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Ford Antenna Regular'), local('FordAntenna-Regular'),
-       url('../fonts/FordAntenna-Regular.woff') format('woff');
+	font-family: 'Clear Sans';
+	font-weight: 400;
+	font-style: normal;
+	src: local("ClearSans"), local("ClearSans-Regular"),
+	url("../fonts/ClearSans-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Ford Antenna';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Ford Antenna Light'), local('FordAntenna-Light'),
-       url('../fonts/FordAntenna-Light.woff') format('woff');
+	font-family: 'Clear Sans';
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: local("ClearSans Medium"), local("ClearSans-Medium"),
+	url("../fonts/ClearSans-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: 'Clear Sans';
+	font-weight: 700;
+	font-style: normal;
+	src: local("ClearSans Bold"), local("ClearSans-Bold"),
+	url("../fonts/ClearSans-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: local("Roboto"), local("Roboto-Regular"),
+	url("../fonts/roboto.woff2") format("woff2"),
+	url("../fonts/roboto.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: local("Roboto Medium"), local("Roboto-Medium"),
+	url("../fonts/robotomedium.woff2") format("woff2"),
+	url("../fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: local("Roboto Bold"), local("Roboto-Bold"),
+	url("../fonts/robotobold.woff2") format("woff2"),
+	url("../fonts/robotobold.woff") format("woff");
 }
 
 
@@ -47,4 +84,38 @@ img {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Clear Sans', 'Tahoma', sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 400;
+	color: #3A4047;
+	background-color: #fff;
+	min-width: 320px;
+}
+
+footer {
+	font-family: 'Roboto', 'Tahoma', sans-serif;
+}
+
+.section-title {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 42px;
+	text-align: center;
+	// padding-top: 33px;
+	// padding-bottom: 15px;
+}
+
+
+.separator {
+	margin: 20px 0;
+	height: 1px;
+	background-color: #E8EDF2;
 }

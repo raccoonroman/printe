@@ -1,0 +1,57 @@
+.production__list {
+	@include ul;
+	margin: 0 -15px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.production__item {
+	margin: 15px;
+	padding: 30px 30px 30px 120px;
+	min-width: 290px;
+	width: calc(100% / 3 - 30px);
+	border: 1px solid #DCE1E6;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.production__item--office {
+	background: url('../img/office.svg') left 10% top 30px no-repeat;
+}
+
+.production__item--promotional {
+	background: url('../img/promotional.svg') left 10% top 30px no-repeat;
+}
+
+.production__item--business {
+	background: url('../img/business.svg') left 10% top 30px no-repeat;
+}
+
+.production__item-title {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+}
+
+.production__item-list {
+	@include ul;
+}
+
+@media (min-width: 1080px) {
+	.production__item--promotional .production__item-list {
+		column-count: 2;
+	}
+}
+
+
+.production__item-item {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+	.production__item-item {
+		margin-bottom: 10px;
+	}
+}
