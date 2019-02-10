@@ -26,7 +26,6 @@
 
 .footer {
 	background: #F7F7F7 url(../img/noise.png);
-	margin-bottom: 200px;
 }
 
 .footer__overlay {
@@ -70,8 +69,10 @@
 }
 
 .footer__contact-line {
+	position: relative;
 	display: flex;
 	justify-content: flex-end;
+	margin-top: 14px;
 	margin-bottom: 10px;
 }
 
@@ -101,8 +102,78 @@
 	&:focus {
 		outline: none;
 	}
+
+	&:hover + .footer__tel-list,
+	&:focus + .footer__tel-list {
+		transform: scale(1);
+	}
 }
 
+.footer__column .footer__tel-list {
+	position: absolute;
+	z-index: 2;
+	top: -200px;
+	right: -15px;
+	width: 220px;
+	padding: 25px 30px;
+	background-color: #fff;
+	box-shadow: 0 0 20px #ccc;
+	transform: scale(0);
+	transition: transform .25s;
+	transition-delay: .2s;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 10px 0 10px;
+		border-color: #fff transparent transparent transparent;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -20px;
+		height: 22px;
+	}
+
+	&:hover {
+		transform: scale(1);
+	}
+}
+
+.footer__tel-link {
+	display: block;
+	position: relative;
+	padding-left: 36px;
+	color: inherit;
+	font-size: 16px;
+	line-height: 40px;
+
+	&::before {
+		position: absolute;
+		top: 5px;
+		left: 0;
+	}
+}
+
+.footer__tel-link-vodafone::before {
+	content: url('../img/vodafone.png');
+}
+
+.footer__tel-link-kyivstar::before {
+	content: url('../img/kyivstar.png');
+}
+
+.footer__tel-link-lifecell::before {
+	content: url('../img/lifecell.png');
+}
 
 
 .footer__copyright {
