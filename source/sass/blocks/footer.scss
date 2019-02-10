@@ -34,10 +34,13 @@
 	box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
 }
 
+.footer__container {
+	max-width: 1240px;
+}
+
 .footer__wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -20px;
 	justify-content: space-between;
 }
 

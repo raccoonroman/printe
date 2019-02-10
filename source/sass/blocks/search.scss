@@ -1,0 +1,104 @@
+.search {
+	width: 57px;
+	height: 57px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	transition: all .5s ease;
+
+	&.open {
+		width: 420px;
+
+		.search-box {
+			background: #1AB0CE;
+		}
+	}
+}
+
+.search-box {
+	width: 100%;
+	height: 100%;
+	box-shadow: none;
+	border: none;
+	color: #fff;
+	padding: 18px 60px 20px 40px;
+	font-size: 20px;
+	transition: background .5s;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.search-button {
+	width: 57px;
+	height: 57px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.search-icon {
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	border: 2px solid #3A4047;
+	display: block;
+	position: relative;
+	margin-left: 5px;
+	transition: all .5s ease;
+
+	&:before {
+		content: '';
+		width: 2px;
+		height: 8px;
+		position: absolute;
+		right: -3px;
+		top: 13px;
+		display: block;
+		background-color: #3A4047;
+		transform: rotate(-45deg);
+		transition: all .5s ease;
+	}
+
+	&:after {
+		content: '';
+		width: 2px;
+		height: 8px;
+		position: absolute;
+		right: -12px;
+		top: 40px;
+		display: block;
+		background-color: #fff;
+		transform: rotate(-45deg);
+		transition: all .5s ease;
+	}
+
+	.open & {
+		margin: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		transform: translate(-10px, -10px);
+		border: 2px solid #fff;
+
+		&:before {
+			transform: rotate(52deg);
+			right: 14px;
+			top: 15px;
+			height: 18px;
+			background-color: #fff;
+		}
+
+		&:after {
+			transform: rotate(-230deg);
+			right: 14px;
+			top: 4px;
+			height: 18px;
+		}
+	}
+}
