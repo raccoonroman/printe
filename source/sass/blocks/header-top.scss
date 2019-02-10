@@ -1,0 +1,288 @@
+.header-top {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-top__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 5px;
+}
+
+.header-top__moblie-nav {
+	display: none;
+}
+
+.header-top__column {
+	max-width: 375px;
+	padding: 10px 12px;
+}
+
+.header-top__column--2 {
+	text-align: center;
+}
+
+.header-top__column-4 {
+	text-align: right;
+}
+
+.header-top__about-text {
+	margin: 0;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.header-top__work-time {
+	font-weight: 700;
+}
+
+.header-top__user-link {
+	position: relative;
+	padding-left: 20px;
+
+	&::before {
+		content: url('../img/user.svg');
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 12px;
+	}
+}
+
+.header-top__email {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.header-top__contact-line {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 14px;
+	margin-bottom: 10px;
+}
+
+
+.header-top__tel-stationary {
+	margin-left: 25px;
+}
+
+.header-top__more-tel-btn {
+	margin-left: 7px;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #EDEDED;
+	border: 0;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover + .header-top__tel-list,
+	&:focus + .header-top__tel-list {
+		transform: scale(1);
+	}
+}
+
+.header-top__column .header-top__tel-list {
+	@include ul;
+	position: absolute;
+	z-index: 2;
+	top: 40px;
+	right: -15px;
+	width: 220px;
+	padding: 25px 30px;
+	background-color: #fff;
+	box-shadow: 0 0 20px #ccc;
+	transform: scale(0);
+	transition: transform .25s;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -10px;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 10px 10px 10px;
+		border-color: transparent transparent #fff transparent;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -22px;
+		height: 22px;
+	}
+
+	&:hover,
+	&:focus {
+		transform: scale(1);
+	}
+}
+
+.header-top__tel-link {
+	display: block;
+	position: relative;
+	padding-left: 34px;
+	color: inherit;
+	font-size: 16px;
+	line-height: 40px;
+
+	&::before {
+		position: absolute;
+		top: 5px;
+		left: 0;
+	}
+}
+
+.header-top__tel-link-vodafone::before {
+	content: url('../img/vodafone.png');
+}
+
+.header-top__tel-link-kyivstar::before {
+	content: url('../img/kyivstar.png');
+}
+
+.header-top__tel-link-lifecell::before {
+	content: url('../img/lifecell.png');
+}
+
+
+
+
+.header-top__basket {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	width: 48px;
+	height: 48px;
+
+	&::after {
+		content: "3";
+		position: absolute;
+		top: -6px;
+		right: -18px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 50%;
+		color: #fff;
+		background-color: #1AB0CE;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-top__wrapper {
+		display: block;
+	}
+
+	.header-top__column {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.header-top__moblie-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0;
+	}
+
+	.header-top__mobile-search {
+		position: relative;
+		flex-grow: 1;
+		height: 57px;
+	}
+
+	.header-top__logo {
+		img {
+			width: 160px;
+		}
+	}
+
+	.header-top__column--1 {
+		margin-top: -70px;
+	}
+
+	.header-top__column--5 {
+		display: none;
+	}
+
+	.header-top__toggle {
+		display: block;
+		position: relative;
+		width: 57px;
+		height: 57px;
+		font-size: 0;
+		border: none;
+		cursor: pointer;
+		background-color: #26B4D0;
+		transition: background 0.3s;
+		z-index: 3;
+
+		span {
+			display: block;
+			position: absolute;
+			top: 27px;
+			left: 9px;
+			right: 9px;
+			height: 4px;
+			background: white;
+			transition: background 0.3s 0s;
+
+			&::before,
+			&::after {
+				position: absolute;
+				display: block;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				background-color: #fff;
+				content: "";
+				transition-duration: 0.3s, 0s;
+			}
+
+			&::before {
+				top: -12px;
+				transition-property: top, transform;
+			}
+
+			&::after {
+				bottom: -12px;
+				transition-property: bottom, transform;
+			}
+		}
+	}
+
+	.header-top__toggle--active {
+		background-color: #E4E5E7;
+
+		span {
+			background: none;
+			transition: background 0.3s 0s;
+
+			&::before,
+			&::after {
+				transition-delay: 0s, 0.3s;
+			}
+
+			&::before {
+				top: 0;
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				bottom: 0;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}

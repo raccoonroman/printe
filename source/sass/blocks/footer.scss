@@ -146,7 +146,8 @@
 		height: 22px;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		transform: scale(1);
 	}
 }

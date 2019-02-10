@@ -102,12 +102,18 @@ body {
 
 footer {
 	font-family: 'Roboto', 'Tahoma', sans-serif;
+}
 
-	.link {
-		color: inherit;
-		font-size: 14px;
-		line-height: 21px;
-		text-decoration-line: underline;
+.link {
+	color: inherit;
+	font-size: 14px;
+	line-height: 21px;
+	text-decoration-line: underline;
+	transition: color .25s;
+
+	&:hover,
+	&:focus {
+		color: #1AB0CE;
 	}
 }
 
